@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CreateCouponRequest",
+  "type": "object",
+  "required": [
+    "storeName",
+    "storeWebsiteUrl",
+    "code",
+    "description",
+    "discountType",
+    "discountValue",
+    "expiryDate",
+    "askingPrice"
+  ],
+  "properties": {
+    "storeName": { "type": "string", "minLength": 1 },
+    "storeWebsiteUrl": { "type": "string", "format": "uri" },
+    "storeLogoUrl": { "type": "string", "format": "uri" },
+    "code": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "discountType": {
+      "type": "string",
+      "enum": ["PERCENTAGE", "FIXED", "FREE_SHIPPING"]
+    },
+    "discountValue": { "type": "number", "minimum": 0 },
+    "minOrderValue": { "type": "number", "minimum": 0 },
+    "expiryDate": { "type": "string", "format": "date" },
+    "askingPrice": { "type": "number", "exclusiveMinimum": 0 }
+  }
+}

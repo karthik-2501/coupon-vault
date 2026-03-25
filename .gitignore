@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+frontend/.next/
+frontend/out/
+
+# Build
+backend/target/
+*.class
+*.jar
+*.war
+
+# Env & IDE
+.env
+.env.example
+.env.local
+backend/.env
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
